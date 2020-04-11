@@ -222,15 +222,31 @@ public class Dungeon_of_Skulls_Neat{
 
             case 3:
              bener = bener + 1;
+             RuteDuaSatu();
             break;
 
             case 4:
             bener = bener + 1;
+            RuteDuaDua();
             break;
+
+            default:
+             System.out.println("Masukkan input yang benar! (1-4)");
          }
         }
 
         
+    }
+
+    static void RuteDuaSatu(){
+        System.out.println("Kamu menarik pedangmu. Walaupun takut tetapi kamu percaya kamu dapat melewati ini. Dengan sigap dan hati-hati kamu segera berlari kearah pintu keluar.");
+        System.out.println("Setiap kadal yang melompat untuk menerkam dirimu kamu tebas tanpa ampun. Beberapa ada yang mati, tetapi banyak yang hanya terpental begitu saja. Itu bukan kepentinganmu, kepentingan dirimu adalah keselamatan");
+        System.out.println("Saking banyaknya monster di ruangan tersebut, sedikit tidak mungkin untuk dirimu dapat berhasil selamat tanpa luka. Hanya sebagian yang dapat kamu tangkis tetapi beberapa masih dapat berhasil menggigit tubuhmu.");
+        System.out.println("Satu hal yang kamu baru tahu adalah, monster ini ternyata berbisa. Kamu merasa dirimu pelan-pelan merasa kaku.");
+    }
+
+    static void RuteDuaDua(){
+        System.out.println("[PLACEHOLDER]Lawan monster, satu-satu, kena serang, semua mati, mau pingsan, tiba tiba ada setan, nawarin pilihan, mati disini juga, atau tanda-tangan kontrak dia, kalo mati ya mati, kalo iya nanti dikasih kekuatan berlebih.");
     }
     static void RuteTiga(){
         route = "ketiga"; 
