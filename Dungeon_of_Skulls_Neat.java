@@ -251,6 +251,89 @@ public class Dungeon_of_Skulls_Neat{
     static void RuteTiga(){
         route = "ketiga"; 
         System.out.println("Kamu memilih untuk melewati rute " + route + ".");
+        System.out.println("Kamu diberikan pilihan untuk melewati lorong gelap atau terang");
+        System.out.println("Karena ini pertarungan pertamamu, kamu memilih lorong yang terang.\nDiujung lorong kamu melihat sebuah pintu yang terlihat normal.\nKamu mencoba membuka pintu itu dan berfikiran pintu itu akan membawamu ke sisi Tuhan atau kamu mengetahui mekanisme untuk menutupnya.");
+        System.out.println("Tetapi.. Ternyata pintu itu benar-benar biasa. Hanya saja kamu terlalu banyak berimajinasi dan berfikie yang aneh-aneh.");
+        System.out.println("Di dalamnya kamu melihat 7 item yang tergeletak. Pada dinding ruangan tersebut tertuliskan 'Ambillah satu barang untuk kamu simpan selamanya'.");
+        System.out.println("Kamu memilih untuk mengambil : ");
+        System.out.println("1. Kotak harta karun berlapis Emas.\n2. Kotak harta karun biasa.\n3. Berlian terbesar yang kamu lihat.\n4. Tas ransel lusuh.\n5. Sebuah gulir yang memiliki segel kerajaan.");
+        System.out.println("6. Ramuan hijau dengan butiran-butiran kecil di dalamnya.\n7. Pedang sakti yang ketajamannya 7 kali 5 samadengan 35.");
+        System.out.println("[Masukkan Inputmu]");
+        bener = 0;
+        pilihan = 0;
+        pilihan = input.nextInt();
+        switch (pilihan){
+            case 1 :
+                RuteTigaSatu();
+            case 2 :
+                bener = 1;
+                System.out.println("Kamu membuka kotak biasa tersebut. Ketika kamu membukanya, kotak tersebut ternyata berubah menjadi moster yang sangat berbahaya.\nKamu digigit oleh moster tersebut. Lalu terdampar dengan badan menjadi biru.");
+                Mati();
+            case 3 :
+                RuteTigaDua();
+            case 4 :
+                RuteTigaTiga();
+            case 5 :
+                RuteTigaEmpat();
+            case 6 :
+                RuteTigaLima();
+            case 7 :
+                RuteTigaEnam();
+            
+            default :
+                System.out.println("Masukkan input yang benar! (1-4)");
+        }
+    }
+    static void RuteTigaSatu(){
+        bener = 1;
+        System.out.println("Kamu membuka kotak emas tersebut dan mendapati di dalamnya banyak sekali harta. Harta tersebut kamu ambil semua hingga tidak bersisa.");
+        System.out.println("Ketika sudah terambil semua kamu melihat ada tombol kecil di dasar kotak tersebut.\nKamu penasaran dan akhirnya menekan tombol itu dan tiba-tiba terdengar suara gerbang yang terbuka lalu kamu menghampiri suara tersebut.");
+        System.out.println("Suara tersebut mengarah ke sebuah pintu berwarna emas. Kamu dengan bahagianya mengira pintu tersebut adalah pintu keluar lalu kamu membuka pintu tersebut.");
+        System.out.println("Seperti perkiraanmu pintu benar-benar menunjukkan jalan keluar. Kamu-pun bergegas untuk keluar melewati pintu itu dengan membawa harta yang kamu ambil dari kotak harta karun tadi.");
+        System.out.println("Setelah berjalan beberapa meter tiba-tiba terdengar suara motor RX-King mendekat. Benar saja, motor itu ternyata adalah begal dengan senjata yang sangat modern lagi canggih. Kamu berencana untuk melawannya dengan senjatamu.");
+        System.out.println("Naasnya, senjatamu kalah canggih. Dalam sekejap kamu tergeletak lemas dengan hartamu dibawa oleh begal tersrbut.");
+        Mati();
+    }
+    static void RuteTigaDua(){
+        bener = 1;
+        System.out.println("Kamu mengambil berlian tersebut dan kamu bawa.\nKetika kamu mengambilnya tiba-tiba ada goncangan dasyat di dalam ruangan tesebut.\nSatu demi satu puing-puing berjatuhan.");
+        System.out.println("Kamu panik dan akhirnya kamu lari sambil membawa berlian tersebut.\nKapanikanmu membuatmu gegabah dan melangkah tanpa arah.\nKamu tersandung dan jatuh, berlian yang ada pada mu juga terlempar jauh dari jangkauanmu.");
+        System.out.println("Tiba-tiba puing berukuean besar jatuh tepat di kakimu, sehingga kamu tidak bisa bergerak.\nDari atas muncul seekor moster raksasa yang mana itu adalah penjaga berlian tersebut.");
+        System.out.println("Moster itu melihat mu dan langsung menghancurkan tubuhmu berkeping-keping.");
+        Mati();
+        
+    }
+    static void RuteTigaTiga(){
+        bener = 1;
+        System.out.println("Kamu mengambil tas itu dan membukanya.\nTidak disangka tas selusuh itu dalamnya adalah baju zirah yang kuat.\nKamu memakai baju zirah tersebut dan kamu merasa kekuatanmu bertambah.\n[strength+1]");
+        strength=strength+1;
+        System.out.println("Ketika kamu memakai baju tersebut, muncul sinar dari bagian dada yang menyorot kesuatu lubang.\nSinar itu menyebabkan terbukanya pintu Ghaib yang sebelumnya kamu tidak mengetahui keberadaannya.");
+        System.out.println("Kamu masuk ke dalam pintu itu dan melanjutkan perjalanan.\nLorong demi lorong terus kamu telusuri hingga sampai ke suatu tempat yang mana itu adalah jalan keluar.");
+        Boss();
+    }
+    static void RuteTigaEmpat(){
+        bener = 1;
+        System.out.println("Kamu mengambil gulir tersebut dan membukanya.\nGulir tersebut berisi tulisan yang aneh, kamu mencoba membolak-balikkan dan menebak apa makna dari tulisan tersebut.\nTanpa pikir panjang kamu langsung membacanya.");
+        System.out.println("Selesai kamu baca, tiba-tiba kamu mendengar suara misterius yang entah dari mana datangnya.\nSuara itu membuatmu yakin dan kamupun mengikuti suara tersebut.\nSuara tersebut membawamu ke suatu ruangan yang sangat luas.");
+        System.out.println("Ketika kamu sampai di ruangan tersebut, kamu disambut oleh kuda bersayap berwarna putih.\nSuara itu mengisyaratkan bahwa kuda itu menjadi milikmu. Kamupun langsung menungganginya.");
+        System.out.println("Dengan menunggangi kuda tersebut kamu merasa tubuhmu lebih kuat dari sebelumnya.\n[strength+1]");
+        strength=strength+1;
+        System.out.println("Kamupun melanjutkan perjalananmu dengan menunggangi kuda tersebut hingga samapai ke suatu pintu yang mana pintu itu adalah jalan keluar.");
+        Boss();
+    }
+    static void RuteTigaLima(){
+        bener = 1;
+        System.out.println("Kamu meminum ramuan itu sampai habis. Kemudian selang beberapa menit kamu mulai mengantuk.\nDengan kondisi mengantuk berat kamu melihat ada pintu di depanmu dan kamupun membuka serta memasukinya.");
+        System.out.println("Tidak disangka ternyata pintu tersbut adalah jelmaan Makhluk yang tinggi besar dengan mulut yang sangat lebar hingga terlihat seperti pintu.\nKamu termakan oleh moster tersebut. Badanmu hancur tak bersisa.");
+        Mati();
+    }
+    static void RuteTigaEnam(){
+        bener = 1;
+        System.out.println("Kamu membawa pedang sakti yang sangat tajam.\nKamu merasa kekuatanmu bertambah kuat.\n[strength+1]");
+        strength=strength+1;
+        System.out.println("Ketika kamu memegang pedang tersebut, keluar cahaya dari pedang itu masuk ke suatu lubang.\nTerbukalah suatu pintu yang kamu tidak menyadari keberadaannya sebelumnya.");
+        System.out.println("Kamu masuk ke dalam pintu tersebut dan melanjutkan perjalanan.\nMenyusuri lorong yang sangat panjang dan pada akhirnya kamu menemukan jalan keluar.");
+        Boss();
     }
     static void RuteEmpat(){
         route = "keempat"; 
