@@ -18,6 +18,14 @@ public class Dungeon_of_Skulls_Neat{
     }
  
     //Jeda text
+    static void jeda5(){
+        try {
+            Thread.sleep(4500);
+           }
+        catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+    }
     static void jeda2(){
         try {
             Thread.sleep(2000);
@@ -353,12 +361,12 @@ public class Dungeon_of_Skulls_Neat{
         System.out.println("Lama kelamaan rasa sakitnya mulai muncul pada tubuhmu.");     jeda1();
         System.out.println("[Nyawamu berkurang!]");     jeda1();
         health = health - 9;
-        System.out.println("Nyawamu : " + health);     jeda1();
+        System.out.println("Nyawamu : " + health);     jeda5();
         System.out.println("Kamu melihat sekitar dan kamu menemukan kotak harta karun. Kamu berharap didalamnya ada potion untuk menyembuhkan dirimu");     jeda1();
         System.out.println("Dan ternyata benar saja, didalamnya ada sebuah tengkorak tua, dengan botol potion yang belum dibuka.");     jeda1();
         System.out.println("Kamu segera mengkonsumsi potion tersebut, pelan pelan kamu merasa tubuhmu lebih sehat, walaupun tidak sepenuhnya.");     jeda1();
         System.out.println("[Nyawamu bertambah!]");     jeda05();
-        health = health - 4;
+        health = health + 4;
         System.out.println("Nyawamu : " + health);     jeda05();
         System.out.println("Kamu akhirnya dapat bergerak dengan leluasa.");     jeda05();
         System.out.println("Selidik demi selidik, kamu menemukan tengkorak pada harta karun tadi 'memegang' pedang.");     jeda05();
@@ -366,8 +374,7 @@ public class Dungeon_of_Skulls_Neat{
         System.out.println("Kamu memilih untuk mengambil pedangnya untuk senjata utamamu.");     jeda05();
         System.out.println("[Kekuatanmu bertambah!]");     jeda05();
         strength = strength + 4;
-        System.out.println("Kekuatanmu : " + strength);     jeda05();
-        jeda1();
+        System.out.println("Kekuatanmu : " + strength); jeda5();
         System.out.println("Setelah semuanya sudah siap, kamu akhirnya melanjutkan perjalananmu kedalam.");     jeda05();
         Boss();
     }
@@ -436,7 +443,7 @@ public class Dungeon_of_Skulls_Neat{
              System.out.println("'Ingat dengan janji kita, oke kawan?' Kata setan tersebut terakhir kalinya sebelum ia tertawa histeris dan menghilang seperti asap");        jeda05();
              janji = 1;
              System.out.println("[Kamu merasa kamu memiliki janji yang benar benar tidak bisa diingkari...]");        jeda05();
-             System.out.println("Dengan kekuatan yang berlebih, kamu melanjutkan perjalanan kamu, dengan tujuan utama untuk melawan 'monster di ujung dungeon ini'...");        jeda05();
+             System.out.println("Dengan kekuatan yang berlebih, kamu melanjutkan perjalanan kamu, dengan tujuan utama untuk melawan 'monster di ujung dungeon ini'...");        jeda5();
              Boss();
             break;
 
