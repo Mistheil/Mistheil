@@ -4,11 +4,11 @@ public class Dungeon_of_Skulls_Neat{
     public static Scanner input = new Scanner(System.in);
     public static Random rand = new Random();
     public static double health = 10;
-    public static double strength = 1;
+    public static double strength = 1.5;
     public static String rute = "0";
     public static int loop = 0;
     public static int loop2 = 0;
-    public static String route, pilihan2, nama;
+    public static String route, rute2s, nama;
     public static int bener, bener2, pilihan, rute2, janji = 0;
     public static double Bosshealth = 1000;
     public static double Damage = 0;
@@ -73,6 +73,7 @@ public class Dungeon_of_Skulls_Neat{
      strength = 1;
      pilihan = 0;
      janji = 0;
+     Bosshealth = 1000;
      System.out.println("Kamu berdiri tepat didepan pintu masuk dungeon, dan kamu menemukan jalan yang bercabang ke empat arah.");     jeda05();
      int jalan = 0;   
      for (jalan = 1; jalan <= 4; jalan++) {
@@ -233,8 +234,8 @@ public class Dungeon_of_Skulls_Neat{
                     System.out.println("Apakah kamu ingin membuka harta karunnya?");     jeda05();
                     System.out.println("[iya/tidak]");     jeda05();
                     while (pilihan == 0){
-                    pilihan2 = input.nextLine();
-                    switch (pilihan2) {
+                    rute2s = input.nextLine();
+                    switch (rute2s) {
                        case "iya":
                            pilihan = 1;
                            System.out.println("Kamu membuka harta karun tersebut. Tidak banyak isinya selain beberapa keping koin dan sebagainya.");     jeda05();
@@ -678,10 +679,16 @@ public class Dungeon_of_Skulls_Neat{
         System.out.println("Obor...?\nDi ujung mata kamu melihat obor di dinding lorong.\nKamu pun mendekatinya dan melihat bahwa gagang obor basah\n.\n.\n.\nDARAH?!");        jeda2();
         System.out.println("Obor ini akan sangat membantumu menulusuri sisa dari lorong ini, tetapi dilain hal obor ini berlumuran darah.");        jeda05();
         System.out.println("Apakah kamu akan mengambil obor ini?\nYa.\nTidak.");
-        String obor;
-        obor = input.next()+ input.nextLine();
-                switch (obor) {
+        rute = "null";
+        rute2s = "null";
+        route = "null";
+        bener = 0;
+        bener2 = 0;
+        while (bener == 0){
+        rute = input.next()+ input.nextLine();
+                switch (rute) {
                     case "ya":
+                        bener = 1;
                         jeda05();
                         System.out.println("Kamu memilih untuk mengambil obornya.\nTanganmu menggenggam obor dengan kuat.");        jeda1();
                         System.out.println("Kamu mencoba untuk melihat lorong dengan lebih jelas.\nHanya untuk melihat dinding yang terbuat dari daging busuk.");        jeda05();
@@ -691,10 +698,11 @@ public class Dungeon_of_Skulls_Neat{
                         System.out.println("Makhluk apa yang dapat melakukan hal ini?\nJika benar ini daging manusia...\nApakah dirimu akan jadi salah satu darinya?");        jeda1();
                         System.out.println("Apa yang akan kamu lakukan?\nMaju.\nMundur.");        jeda1();
 
-                        String mm;
-                        mm = input.next()+ input.nextLine();
-                            switch (mm) {
+                        while (bener2 == 0){
+                        rute2s = input.next()+ input.nextLine();
+                            switch (rute2s) {
                                 case "maju":
+                                    bener2 = 1;
                                     jeda05();
                                     System.out.println("Dirimu sudah membulatkan tekad.\nKamu tidak akan menyerah.");        jeda05();
                                     System.out.println("Kamu pun mengangkat obor ke arah dinding dan menyulutnya.");        jeda05();
@@ -702,7 +710,7 @@ public class Dungeon_of_Skulls_Neat{
                                     System.out.println("Kamu pun terus berjalan tanpa melihat ke belakang.\nMakhluk apapun yang berhuni di lorong ini telah musnah.");        jeda05();
                                     System.out.println("Seketika kamu mendengar geraman yang luar biasa keras menggema sekujur dungeon ini, sepertinya ada sesuatu yang sangat kesakitan...");        jeda05();
                                     System.out.println("[Nyawa dari salah satu monster di dungeon ini sepertinya kesakitan...]");        jeda2();
-                                    Bosshealth = Bosshealth - 400;
+                                    Bosshealth = Bosshealth - 500;
                                     System.out.println("Setelah kamu mendengar geraman tersebut, bulu kudukmu merinding...");        jeda05();
                                     System.out.println("Kamu segera berlari, berharap menemukan ujung dari lorong tersebut.");        jeda05();
                                     System.out.println("Setelah kamu menemukan lorong di ujung ada pencahayaan yang lebih baik, kamu segera melempar obor ditanganmu");        jeda05();
@@ -710,6 +718,7 @@ public class Dungeon_of_Skulls_Neat{
                                     Boss();
                                 break;
                                 case "mundur":
+                                    bener2 = 1;
                                     System.out.println("Sudah cukup.\nSudah berjam-jam kamu menelusuri lorong ini.");        jeda05();
                                     System.out.println("Waktunya dirimu kembali ke percabangan dan memilih rute lain.");        jeda05();
                                     System.out.println("Tetapi...\nSepertinya nasib berkata berbeda.\nSepertinya waktumu sampai disini saja.");        jeda05();
@@ -718,31 +727,48 @@ public class Dungeon_of_Skulls_Neat{
                                     System.out.println("Muka tersenyum yang dipenuhi belatung adalah hal yang terakhir kamu liat.");        jeda05();
                                     Mati();
                                 break;
+
+                                default:
+                                 System.out.println("Masukkan input yang benar![maju/mundur]");
                             }
+                        }
+                        
                     break;
 
                     case "tidak":
+                        bener = 1;
                         System.out.println("Kamu memilih untuk tidak mengambil obornya.");        jeda05();
                         System.out.println("Sudah jelas kalau itu jebakan, ada darah pada gagangnya.");        jeda05();
                         System.out.println("Orang bodoh macam apa yang bakal mengambilnya?");        jeda05();
                         System.out.println("Sekarang kamu memiliki dua pilihan.\nApakah kamu akan pulang atau tetap melanjutkan petualangan ini?");        jeda05();
                         System.out.println("Bagaimana?\nMaju.\nMundur.");        jeda05();
-                        String nn;
-                        nn = input.next()+ input.nextLine();
-                            switch (nn) {
+                        while (bener2 == 0){
+                        route = input.next()+ input.nextLine();
+                            switch (route) {
                                 case "maju":
+                                    bener2 = 1;
                                     System.out.println("Kamu memilih untuk lanjut.\nSudah sampai sini masak berhenti.");        jeda05();
                                     System.out.println("Kamu berjalan terus menyusuri lorong.\nDan hingga akhirnya kamu berhasil keluar dari tempat itu.");        jeda05();
                                     Boss();
                                 break;
                                 case "mundur":
+                                    bener2 = 1;
                                     System.out.println("Sudah cukup.\nLorong ini seperti tidak ada habisnya.");        jeda05();
                                     System.out.println("Dirimupun berutar balik.\nDan lalu.\n.\n.\n.");        jeda5();
                                     Mati();
                                 break;
+
+                                default :
+                                 System.out.println("Masukkan input yang benar! [maju/mundur]");
                             }
-                    break;   
+                        }
+                    break;
+                    
+                    default:
+                    System.out.println("Masukkan input yang benar! [ya/tidak]");
+
                 }
+            }
     }
     static void Boss(){
      System.out.println("Kamu sampai di suatu goa raksasa, dengan cahaya obor yang redup menerangi goa tersebut.\nKamu merasa suatu keberadaan yang menyeramkan di goa tersebut..."); jeda1();
@@ -790,7 +816,7 @@ public class Dungeon_of_Skulls_Neat{
              case "serang":
              health = health - 1;
              System.out.println("Kamu terserang!\nNyawamu : " + health);
-             Damage = Dmg() * strength * 100;
+             Damage = Dmg() * strength * 150;
              Bosshealth = Bosshealth - Damage;
              jeda05();
              System.out.println("Kamu menyerang sebesar " + Math.round(Damage) + "! Nyawa boss tersebut sisa : " + Math.round(Bosshealth));
