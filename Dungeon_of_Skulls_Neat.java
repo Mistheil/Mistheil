@@ -667,7 +667,82 @@ public class Dungeon_of_Skulls_Neat{
 
     static void RuteEmpat(){
         route = "keempat"; 
-        System.out.println("Kamu memilih untuk melewati rute " + route + ".");
+        System.out.println("Kamu memilih untuk melewati rute " + route + ".");        jeda05();
+        System.out.println("Kamu berdiri di depan lorong yang sangat gelap.\nSeakan tidak ada sinar yang dapat menembus kegelapan di dalamnya.");        jeda05();
+        System.out.println("Kamu memberanikan diri untuk menyusuri lorong tersebut.\nLorong ini sangatlah sunyi, hanya suara tetesan air di belakangmu saja yang terdengar.");        jeda05();
+        System.out.println("Di dalamnya kamu mencium bau busuk.\nSeperti bau daging yang terlalu lama ditinggal diluar padahal sudah dari kemarin disuruh ibu buat dimasukkan ke penyimpanan (maaf ya bu...)");        jeda05();
+        System.out.println("Bau apakah gerangan?");        jeda05();
+        System.out.println("Semakin lama kamu nenyusuri lorong semakin dirimu yakin bahwa lorong ini tidak ada ujungnya.");        jeda05();
+        System.out.println("Kenapa bisa?\nKenapa lorong ini seperti tidak ada akhirnya?\nKenapa kamu mencium bau busuk setelah memasuki lorong ini? Hal apa yang bisa membuat bau sebusuk ini?");        jeda05();
+        System.out.println("Dan mengapa suara tetesan air yang dari tadi kamu dengar setelah memasuki lorong tidak kian lama kian menjauh.\nApakah dirimu sudah gila\n.\n.\n.\n.\n.\n?");        jeda2();
+        System.out.println("Obor...?\nDi ujung mata kamu melihat obor di dinding lorong.\nKamu pun mendekatinya dan melihat bahwa gagang obor basah\n.\n.\n.\nDARAH?!");        jeda2();
+        System.out.println("Obor ini akan sangat membantumu menulusuri sisa dari lorong ini, tetapi dilain hal obor ini berlumuran darah.");        jeda05();
+        System.out.println("Apakah kamu akan mengambil obor ini?\nYa.\nTidak.");
+        String obor;
+        obor = input.next()+ input.nextLine();
+                switch (obor) {
+                    case "ya":
+                        jeda05();
+                        System.out.println("Kamu memilih untuk mengambil obornya.\nTanganmu menggenggam obor dengan kuat.");        jeda1();
+                        System.out.println("Kamu mencoba untuk melihat lorong dengan lebih jelas.\nHanya untuk melihat dinding yang terbuat dari daging busuk.");        jeda05();
+                        System.out.println("Dinding daging berwarna merah gelap, bergerak-gerak seakan masih hidup.\nBukan.\nBukan masih hidup, tetapi jutaan cacing dan belatung yang merambat-rambat di dalam dinding memberikan ilusi seakan dinding daging terlihat hidup.");        jeda2();
+                        System.out.println("Bau busuk terasa semakin kuat, dirimu merasakan mual.\nApakah ini nyata, atau dirimu yang mulai hilang akal?");        jeda05();
+                        System.out.println("Jika hal ini benar-benar nyata...\nDaging apa yang membentuk dinding daging ini?\nMonster yang sudah mati membusuk, hewan liar yang tersesat, atau...\nmungkinkah ini daging manusia?");        jeda1();
+                        System.out.println("Makhluk apa yang dapat melakukan hal ini?\nJika benar ini daging manusia...\nApakah dirimu akan jadi salah satu darinya?");        jeda1();
+                        System.out.println("Apa yang akan kamu lakukan?\nMaju.\nMundur.");        jeda1();
+
+                        String mm;
+                        mm = input.next()+ input.nextLine();
+                            switch (mm) {
+                                case "maju":
+                                    jeda05();
+                                    System.out.println("Dirimu sudah membulatkan tekad.\nKamu tidak akan menyerah.");        jeda05();
+                                    System.out.println("Kamu pun mengangkat obor ke arah dinding dan menyulutnya.");        jeda05();
+                                    System.out.println("Disaat api mulai merambat ke seluruh dinding, kamu mendengar teriakan nyaring kesakitan.\nSuara yang kamu dengar bukanlah suara manusia.");        jeda05();
+                                    System.out.println("Kamu pun terus berjalan tanpa melihat ke belakang.\nMakhluk apapun yang berhuni di lorong ini telah musnah.");        jeda05();
+                                    System.out.println("Seketika kamu mendengar geraman yang luar biasa keras menggema sekujur dungeon ini, sepertinya ada sesuatu yang sangat kesakitan...");        jeda05();
+                                    System.out.println("[Nyawa dari salah satu monster di dungeon ini sepertinya kesakitan...]");        jeda2();
+                                    Bosshealth = Bosshealth - 400;
+                                    System.out.println("Setelah kamu mendengar geraman tersebut, bulu kudukmu merinding...");        jeda05();
+                                    System.out.println("Kamu segera berlari, berharap menemukan ujung dari lorong tersebut.");        jeda05();
+                                    System.out.println("Setelah kamu menemukan lorong di ujung ada pencahayaan yang lebih baik, kamu segera melempar obor ditanganmu");        jeda05();
+                                    System.out.println("Walaupun terang, kamu tetap berlari, takut dengan sesuatu...");        jeda2();
+                                    Boss();
+                                break;
+                                case "mundur":
+                                    System.out.println("Sudah cukup.\nSudah berjam-jam kamu menelusuri lorong ini.");        jeda05();
+                                    System.out.println("Waktunya dirimu kembali ke percabangan dan memilih rute lain.");        jeda05();
+                                    System.out.println("Tetapi...\nSepertinya nasib berkata berbeda.\nSepertinya waktumu sampai disini saja.");        jeda05();
+                                    System.out.println("Disaat dirimu berbalik arah.\nKamu melihat jalurmu tertutup dinding daging yang sama.");        jeda05();
+                                    System.out.println("Hanya saja...\nDinding yang ini...\nTerlihat seperti muka.");        jeda05();
+                                    System.out.println("Muka tersenyum yang dipenuhi belatung adalah hal yang terakhir kamu liat.");        jeda05();
+                                    Mati();
+                                break;
+                            }
+                    break;
+
+                    case "tidak":
+                        System.out.println("Kamu memilih untuk tidak mengambil obornya.");        jeda05();
+                        System.out.println("Sudah jelas kalau itu jebakan, ada darah pada gagangnya.");        jeda05();
+                        System.out.println("Orang bodoh macam apa yang bakal mengambilnya?");        jeda05();
+                        System.out.println("Sekarang kamu memiliki dua pilihan.\nApakah kamu akan pulang atau tetap melanjutkan petualangan ini?");        jeda05();
+                        System.out.println("Bagaimana?\nMaju.\nMundur.");        jeda05();
+                        String nn;
+                        nn = input.next()+ input.nextLine();
+                            switch (nn) {
+                                case "maju":
+                                    System.out.println("Kamu memilih untuk lanjut.\nSudah sampai sini masak berhenti.");        jeda05();
+                                    System.out.println("Kamu berjalan terus menyusuri lorong.\nDan hingga akhirnya kamu berhasil keluar dari tempat itu.");        jeda05();
+                                    Boss();
+                                break;
+                                case "mundur":
+                                    System.out.println("Sudah cukup.\nLorong ini seperti tidak ada habisnya.");        jeda05();
+                                    System.out.println("Dirimupun berutar balik.\nDan lalu.\n.\n.\n.");        jeda5();
+                                    Mati();
+                                break;
+                            }
+                    break;   
+                }
     }
     static void Boss(){
      System.out.println("Kamu sampai di suatu goa raksasa, dengan cahaya obor yang redup menerangi goa tersebut.\nKamu merasa suatu keberadaan yang menyeramkan di goa tersebut..."); jeda1();
